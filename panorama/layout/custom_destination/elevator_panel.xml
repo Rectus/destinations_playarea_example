@@ -1,0 +1,41 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/base_styles.css" />
+		<include src="file://{resources}/styles/info_panels.css" /> 
+		<include src="file://{resources}/styles/custom_destination/example.css" />
+	</styles>
+
+	<script>
+		function GoUp()
+		{		
+			$.DispatchEvent( "ClientUI_FireOutput", '0' );		
+		}
+		function GoDown()
+		{		
+			$.DispatchEvent( "ClientUI_FireOutput", '1' );		
+		}
+	</script>
+
+	<ClientUIDialogPanel class="InWorldInfoPanel AlwaysVisible">
+		<Panel class="Page" id="ElevatorDialog">
+			<Panel class="TextArea WithButtons">
+				<Label class="Title" text="Elevator" />
+				<Panel class="ButtonArea">
+				
+					<Panel class="InfoDialogButton">
+						<Button id="UpBtn" class="DialogButton Visible" text="Top Floor" onactivate="GoUp()"> 
+							<Label text="Top Floor" />
+						</Button>
+					</Panel>
+					<Panel class="InfoDialogButton">
+						<Button id="DownBtn" class="DialogButton Visible" text="Bottom Floor" onactivate="GoDown()"> 
+							<Label text="Bottom Floor" />
+						</Button>
+					</Panel>
+				</Panel>
+			</Panel>
+			
+			
+		</Panel>
+	</ClientUIDialogPanel>
+</root>

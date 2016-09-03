@@ -1,0 +1,35 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/base_styles.css" />
+		<include src="file://{resources}/styles/info_panels.css" /> 
+		<include src="file://{resources}/styles/custom_destination/example.css" />
+	</styles>
+
+	<script>
+		function Call()
+		{		
+			$.DispatchEvent( "ClientUI_FireOutput", '0' );		
+		}
+
+	</script>
+
+	<ClientUIDialogPanel class="InWorldInfoPanel AlwaysVisible">
+		<Panel class="Page" id="ElevatorDialog">
+			<Panel class="TextArea WithButtons">
+				<Label class="Title" text="Elevator example" />
+				<Label class="Desc Big" text="When the player moves onto the elevator, the trigger runs a script that parents the players HMD Anchor to it." />
+				<Panel class="ButtonArea">
+				
+					<Panel class="InfoDialogButton">
+						<Button id="UpBtn" class="DialogButton Visible" text="Call Elevator" onactivate="Call()"> 
+							<Label text="Call Elevator" />
+						</Button>
+					</Panel>
+					
+				</Panel>
+			</Panel>
+			
+			
+		</Panel>
+	</ClientUIDialogPanel>
+</root>

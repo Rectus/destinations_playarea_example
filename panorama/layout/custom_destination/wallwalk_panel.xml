@@ -1,0 +1,16 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/base_styles.css" />
+		<include src="file://{resources}/styles/info_panels.css" /> 
+		<include src="file://{resources}/styles/custom_destination/example.css" />
+	</styles>
+
+	<ClientUIDialogPanel class="InWorldInfoPanel AlwaysVisible">
+		<Panel class="Page" id="GravityGunDialog">
+			<Panel class="TextArea">
+				<Label class="Title" text="Wall walk" />
+				<Label class="Desc Big" text="Walk into the orange area to teleport to the wall and walk out of it to teleport back.\nBy manipulating the origin and angles of the players HMD Anchor, the play area is shifted to the wall.\nNote that the motion controllers do not rotate along with the play area, and that teleporting from the wall does not work properly." />
+			</Panel>
+		</Panel>
+	</ClientUIDialogPanel>
+</root>
